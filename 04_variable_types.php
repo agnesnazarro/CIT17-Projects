@@ -13,8 +13,7 @@
         $int_var = 12345;
         $another_int = -12345 + 12345;
 
-        echo $int_var;
-        echo "<br>";
+        echo "$int_var <br>";
         echo $another_int;
     ?>
 
@@ -24,12 +23,9 @@
         $many_2 = 2.2111200;
         $few = $many + $many_2;
 
-        echo $many;
-        echo "<br>";
-        echo $many_2;
-        echo "<br>";
-        echo $few;
-        echo "<br>";
+        echo "$many <br>";
+        echo "$many_2 <br>";
+        echo "$few <br>";
         print("$many + $many_2 = $few");    
     ?>
 
@@ -62,59 +58,54 @@
         $string_39 = "This string has thirty-nine characters";
         $string_0 = ""; // a string with zero characters
 
-        echo $string_1;
-        echo "<br>";
-        echo $string_2;
-        echo "<br>";
-        echo $string_39;
-        echo "<br>";
-        echo $string_0;
-        echo "<br>";
+        echo "$string_1 <br>";
+        echo "$string_2 <br>";
+        echo "$string_39 <br>";
+        echo "$string_0 <br>";
 
         /*Singly quoted strings are treated almost literally, whereas doubly quoted strings replace 
         variables with their values*/
         $variable = "name";
-        $literally = 'My $variable will not print!\\n';
-        print($literally);
-        echo "<br>";
+        $literally = 'My $variable will not print!';
+        print("$literally <br>");
         $literally = "My $variable will print!";
-        print($literally);
-        echo "<br> <br>";
-
-        //Assign multiple lines to a single string variable
-        // $channel =<<<_XML_
-        // <channel>
-        // <title>What's For Dinner<title>
-        // <link>http://menu.example.com/<link>
-        // <description>Choose what to eat tonight.</description>
-        // </channel>
-        // _XML_;
-
-        // echo <<<END
-        // This uses the "here document" syntax to output
-        // multiple lines with variable interpolation. Note
-        // that the here document terminator must appear on a
-        // line with just a semicolon. no extra whitespace!
-        // <br />
-        // END;
-
-        // print $channel;
-        
+        print("$literally <br>");
     ?>
-    
-    <h2>PHP Local Variables</h2>
+        
+    <!-- <?php 
+        //Assign multiple lines to a single string variable
+        $channel =<<<_XML_
+        <channel>
+        <title>What's For Dinner<title>
+        <link>http://menu.example.com/<link>
+        <description>Choose what to eat tonight.</description>
+        </channel>
+        _XML_;
+
+        echo <<<END
+        This uses the "here document" syntax to output
+        multiple lines with variable interpolation. Note
+        that the here document terminator must appear on a
+        line with just a semicolon. no extra whitespace!
+        <br />
+        END;
+
+        print $channel;
+    ?> -->
+
+    <h2>Variables</h2>
+    <h3>Local Variables</h3>
     <?php 
         $x = 4;
         function assignx () {
             $x = 0;
-            print "\$x inside function is $x.";
-            echo "<br>";
+            print "\$x inside function is $x. <br>";
         }
         assignx();
         print "\$x outside of function is $x.";
     ?>
 
-    <h2>PHP Function Parameters</h2>
+    <h3>Function Parameters</h3>
     <?php 
         // multiply a value by 10 and return it to the caller
         function multiply ($value) {
@@ -125,7 +116,7 @@
         Print "Return value is $retval\n";
     ?>
 
-    <h2>PHP Global Variables</h2>
+    <h3>Global Variables</h3>
     <?php 
         $somevar = 15;
         function addit() {
@@ -136,7 +127,7 @@
         addit();
     ?>
 
-    <h2>PHP Static Variables</h2>
+    <h3>Static Variables</h3>
     <?php  
         function keep_track() {
             STATIC $count = 0;
@@ -146,9 +137,7 @@
         }
         keep_track();
         keep_track();
-        keep_track();
-           
+        keep_track(); 
     ?>
-    
 </body>
 </html>
