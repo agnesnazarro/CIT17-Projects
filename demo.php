@@ -17,6 +17,7 @@
         echo "Testing 1 <br>";
         echo "Testing 2 <br>";
         echo "Testing 3 <br>";
+        echo "Test";
     ?>
 </body>
 </html>
