@@ -16,6 +16,6 @@
         echo "<br> Name: $name <br>";
         echo "Email Address: $emailAdd";
         echo "Address: $address";
-    ?>
+        ?>
 </body>
 </html>
